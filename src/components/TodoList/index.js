@@ -6,14 +6,14 @@ import * as TodoActions from "../../store/actions/todos";
 
 class TodoList extends Component {
     state = {
-        newTodoText: "",
-        removeTodoId: 0
+        newTodoText: ""
     };
 
     handleSubmit = event => {
         event.preventDefault();
 
-        this.props.addTodo(this.state.newTodoText);
+        if ( this.state.newTodoText.trim().length > 0 )
+            this.props.addTodo(this.state.newTodoText);
 
         this.setState({ newTodoText: "" });
     };
