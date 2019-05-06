@@ -12,13 +12,13 @@ class TodoList extends Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        if ( this.state.newTodoText.trim().length > 0 )
+        if (this.state.newTodoText.trim().length > 0)
             this.props.addTodo(this.state.newTodoText);
 
         this.setState({ newTodoText: "" });
     };
-    
-    handleDeleteTodo = ( id, event ) => {
+
+    handleDeleteTodo = (id, event) => {
         event.preventDefault();
 
         this.props.deleteTodo(id);
@@ -26,7 +26,7 @@ class TodoList extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container pb-5">
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <input

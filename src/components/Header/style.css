@@ -1,0 +1,26 @@
+:root {
+	--blueLTCO: #1818E8;
+	--greyLTCO: #202027;
+	--whiteLTCO: #FAFAFA;
+}
+
+
+.jumbotron {
+	background-color: var(--greyLTCO);
+	font-family: ibm-plex-mono, monospace;
+	font-weight: 700;
+}
+
+.ltco {
+	font-family: ibm-plex-mono, monospace;
+	font-weight: 700;
+}
+
+.v1 .ltco::before {
+	content: 'ltco./>';
+	color: #FFF;
+	padding: 0.7rem;
+	padding-top: 0.4rem;
+	line-height: 1;
+	background-color: var(--blueLTCO);
+}
